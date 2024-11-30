@@ -1,3 +1,5 @@
+![baniere](baniere.png)
+
 # TreiinQuille
 
 **L'agence TempoTrain** est une entreprise spécialisée dans les voyages temporels. Grâce à ses services, les voyageurs peuvent se rendre dans différentes époques, en suivant des itinéraires sécurisés et programmés à l'avance.
