@@ -12,11 +12,12 @@ Le projet vise à développer une application de gestion des trajets temporels d
 
 ### Problèmes à Résoudre
 
-1. **Gestion du Planning des Conducteurs**  
+1. **Gestion du Planning des Conducteurs**
+
    - Chaque conducteur doit savoir précisément quand, à quelle heure et pour quelle époque un voyage est prévu.
    - Le planning doit être à jour en temps réel et adaptable pour gérer des changements ou des annulations de dernière minute.
 
-2. **Suivi des Billets et des Places Disponibles**  
+2. **Suivi des Billets et des Places Disponibles**
    - L’application doit permettre aux managers de consulter le nombre de billets vendus pour chaque voyage.
    - La gestion des places restantes doit être affichée pour chaque trajet afin d’éviter toute surcharge.
 
@@ -26,11 +27,11 @@ Le projet vise à développer une application de gestion des trajets temporels d
 
 ### Fonctionnalités de l’Application
 
-1. **Module de Planification des Conducteurs**  
+1. **Module de Planification des Conducteurs**
+
    - Création et modification du planning des conducteurs, incluant les heures de départ, la date réelle et la date d’arrivée prévue dans l’époque de destination.
 
-
-2. **Suivi des Billets et des Places Disponibles**  
+2. **Suivi des Billets et des Places Disponibles**
    - Consultation du nombre de billets vendus pour chaque trajet temporel, avec une mise à jour en temps réel.
    - Indication du nombre de places restantes pour chaque voyage, permettant une gestion optimale de la capacité des trains.
 
@@ -43,4 +44,16 @@ Le projet vise à développer une application de gestion des trajets temporels d
 
 ---
 
+<br><br><br><br>
 
+# Diagramme de case d'utilisation :
+
+![diagrammeCasDutilisation](diagrammeCasDutilisation.jpg)
+
+# diagramme de classes métier :
+
+![uml](uml.png)
+
+# diagramme de Gantt :
+
+![gantt](gantt.png)
