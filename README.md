@@ -1,4 +1,4 @@
-# Treiinquille
+# Contexte Treiinquille
 Semih Cakici, Semih Sahin, Emir Sen
 2024-2025
 
@@ -50,14 +50,18 @@ Le projet vise à développer une application de gestion des trajets temporels d
 
 <br><br><br><br>
 
-# Diagramme de case d'utilisation :
+# Diagramme de cas d'utilisation :
 
-![diagrammeCasDutilisation](diagrammeCasDutilisation.jpg)
+![diagrammeCasDutilisation](diagramme_cas_utilisation.png)
 
 # diagramme de classes métier :
 
-![uml](uml.png)
+![diagramme_classes_métier](diagramme_classes_métier.png)
 
 # diagramme de Gantt :
 
 ![gantt](gantt.png)
+
+# maquette :
+
+https://github.com/Semiiih/Treiinquille/blob/main/maquette.pdf
