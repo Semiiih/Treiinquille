@@ -62,6 +62,9 @@ Le projet vise à développer une application de gestion des trajets temporels d
 
 ![gantt](gantt.png)
 
+Le lien pour accèder à tous notre diagrame de Gantt
+https://docs.google.com/spreadsheets/d/10rDGZLGdYxj_BTiiNsYnD3ZwOknBP7Kthplk6Bj9mUo/edit?usp=sharing
+
 # maquette :
 
 https://github.com/Semiiih/Treiinquille/blob/main/maquette.pdf
