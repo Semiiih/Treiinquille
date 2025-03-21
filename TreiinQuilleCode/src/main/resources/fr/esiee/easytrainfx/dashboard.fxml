@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="fr.esiee.treiinquillefx.DashboardController">
+
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #4c1d95;">
+            <Label text="LOGO" style="-fx-text-fill: white;"/>
+            <Button text="Trajet" styleClass="nav-button"/>
+            <Button text="Planning" styleClass="nav-button"/>
+            <Button text="Billet" styleClass="nav-button"/>
+        </VBox>
+    </left>
+
+    <center>
+        <GridPane hgap="10" vgap="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <VBox GridPane.columnIndex="0" GridPane.rowIndex="0"
+                  style="-fx-background-color: white; -fx-background-radius: 10;">
+                <Label text="Billet" style="-fx-font-size: 18px;"/>
+                <TableView fx:id="billetTable"/>
+            </VBox>
+
+            <VBox GridPane.columnIndex="1" GridPane.rowIndex="0"
+                  style="-fx-background-color: white; -fx-background-radius: 10;">
+                <Label text="Trajet" style="-fx-font-size: 18px;"/>
+                <TableView fx:id="trajetTable"/>
+            </VBox>
+
+            <VBox GridPane.columnIndex="0" GridPane.rowIndex="1"
+                  GridPane.columnSpan="2"
+                  style="-fx-background-color: white; -fx-background-radius: 10;">
+                <Label text="Planning" style="-fx-font-size: 18px;"/>
+                <GridPane fx:id="planningGrid"/>
+            </VBox>
+        </GridPane>
+    </center>
+</BorderPane>

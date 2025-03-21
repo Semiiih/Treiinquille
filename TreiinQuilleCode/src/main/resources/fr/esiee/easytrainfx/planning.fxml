@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="fr.esiee.easytrainfx.PlanningController">
+
+    <left>
+        <VBox spacing="5" style="-fx-background-color: white;">
+            <Label text="Conducteurs" style="-fx-font-size: 18px;"/>
+            <ListView fx:id="conducteursList"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox>
+            <Label text="Emploi du temps" style="-fx-font-size: 18px;"/>
+            <GridPane fx:id="timeGrid" alignment="CENTER"
+                      style="-fx-background-color: #1f2937;">
+                <!-- Time slots will be populated programmatically -->
+            </GridPane>
+
+            <HBox alignment="CENTER" spacing="10">
+                <Button text="◀" onAction="#previousWeek"/>
+                <Label fx:id="weekLabel"/>
+                <Button text="▶" onAction="#nextWeek"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
