@@ -2,22 +2,15 @@ package fr.esiee.modele;
 
 public class Arret {
     private int id;
-    private String nom;
-    private TypeArret typeArret;
-
-    public enum TypeArret {
-        TERMINUS,
-        INTERMEDIAIRE
-    }
+    private String localisation;
 
     ////////////////// Les Constructeurs //////////////
     public Arret() {
     }
 
-    public Arret(int id, String nom, TypeArret typeArret) {
+    public Arret(int id, String localisation) {
         this.id = id;
-        this.nom = nom;
-        this.typeArret = typeArret;
+        this.localisation = localisation;
     }
 
     /////////////////// getters/ setters /////////////////
@@ -29,26 +22,17 @@ public class Arret {
         this.id = id;
     }
 
-    public String getNom() {
-        return nom;
+    public String getLocalisation() {
+        return localisation;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public TypeArret getTypeArret() {
-        return typeArret;
-    }
-
-    public void setTypeArret(TypeArret typeArret) {
-        this.typeArret = typeArret;
+    public void setLocalisation(String localisation) {
+        this.localisation = localisation;
     }
 
     public void afficherArret() {
         System.out.println("ID Arret: " + id);
-        System.out.println("Nom Arret: " + nom);
-        System.out.println("Type Arret: " + typeArret);
+        System.out.println("Localisation Arret: " + localisation);
         System.out.println("--------");
     }
 
@@ -56,8 +40,7 @@ public class Arret {
     public String toString() {
         return "Arret{" +
                 "id=" + id +
-                ", nom='" + nom + '\'' +
-                ", typeArret=" + typeArret +
+                ", localisation='" + localisation + '\'' +
                 '}';
     }
 
