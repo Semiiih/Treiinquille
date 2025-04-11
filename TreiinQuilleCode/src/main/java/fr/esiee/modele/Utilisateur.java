@@ -4,24 +4,22 @@ import java.time.LocalDate;
 
 public class Utilisateur {
     private int id;
-    private String login;
-    private String mdp;
     private String nom;
     private String prenom;
-    private LocalDate dateEmbauche;
+    private String email;
+    private String password;
     private Role role;
 
     ////////////////// Les Constructeurs //////////////
     public Utilisateur() {
     }
 
-    public Utilisateur(int id, String login, String mdp, String nom, String prenom, LocalDate dateEmbauche, Role role) {
+    public Utilisateur(int id, String password, String nom, String prenom, String email, Role role) {
         this.id = id;
-        this.login = login;
-        this.mdp = mdp;
         this.nom = nom;
         this.prenom = prenom;
-        this.dateEmbauche = dateEmbauche;
+        this.email = email;
+        this.password = password;
         this.role = role;
     }
 
@@ -33,21 +31,13 @@ public class Utilisateur {
     public void setId(int id) {
         this.id = id;
     }
-
-    public String getLogin() {
-        return login;
+    
+    public String getPassword() {
+        return password;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getMdp() {
-        return mdp;
-    }
-
-    public void setMdp(String mdp) {
-        this.mdp = mdp;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getNom() {
@@ -66,12 +56,12 @@ public class Utilisateur {
         this.prenom = prenom;
     }
 
-    public LocalDate getDateEmbauche() {
-        return dateEmbauche;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDateEmbauche(LocalDate dateEmbauche) {
-        this.dateEmbauche = dateEmbauche;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Role getRole() {
@@ -86,11 +76,10 @@ public class Utilisateur {
     public String toString() {
         return "Utilisateur{" +
                 "id=" + id +
-                ", login='" + login + '\'' +
-                ", mdp='" + mdp + '\'' +
+                ", password='" + password + '\'' +
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
-                ", dateEmbauche=" + dateEmbauche +
+                ", email='" + email + '\'' +
                 ", role=" + role +
                 '}';
     }
@@ -98,11 +87,10 @@ public class Utilisateur {
     public void afficherUtilisateur() {
         System.out.println("-------------------------");
         System.out.println("ID: " + id);
-        System.out.println("Login: " + login);
-        System.out.println("Mot de passe: " + mdp);
+        System.out.println("Mot de passe: " + password);
         System.out.println("Nom: " + nom);
         System.out.println("Prénom: " + prenom);
-        System.out.println("Date d'embauche: " + dateEmbauche);
+        System.out.println("email: " + email);
         System.out.println("Rôle: " + role);
         System.out.println("-------------------------");
     }
