@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="500.0" prefWidth="500.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 10;"
+      xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="fr.esiee.easytrainfx.AjoutTrajetController">
+    <children>
+        <Label alignment="CENTER" text="Ajouter un trajet" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+
+        <HBox alignment="CENTER_LEFT" prefHeight="40.0" spacing="10.0">
+            <children>
+                <Label minWidth="120.0" text="Conducteur :">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Label>
+                <ComboBox fx:id="conducteurComboBox" prefHeight="30.0" prefWidth="250.0" promptText="select" />
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" prefHeight="40.0" spacing="10.0">
+            <children>
+                <Label minWidth="120.0" text="Date de départ :">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Label>
+                <DatePicker fx:id="dateDepart" prefHeight="30.0" prefWidth="150.0" promptText="select" />
+                <TextField fx:id="heureDepart" prefHeight="30.0" prefWidth="95.0" promptText="HH:MM" />
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" prefHeight="40.0" spacing="10.0">
+            <children>
+                <Label minWidth="120.0" text="Date d'arriver :">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Label>
+                <DatePicker fx:id="dateArrivee" prefHeight="30.0" prefWidth="150.0" promptText="select" />
+                <TextField fx:id="heureArrivee" prefHeight="30.0" prefWidth="95.0" promptText="HH:MM" />
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" prefHeight="40.0" spacing="10.0">
+            <children>
+                <Label minWidth="120.0" text="Lieu de départ :">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Label>
+                <ComboBox fx:id="lieuDepartComboBox" prefHeight="30.0" prefWidth="250.0" promptText="select" />
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" prefHeight="40.0" spacing="10.0">
+            <children>
+                <Label minWidth="120.0" text="Lieu d'arriver :">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Label>
+                <ComboBox fx:id="lieuArriveeComboBox" prefHeight="30.0" prefWidth="250.0" promptText="select" />
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" prefHeight="40.0" spacing="10.0">
+            <children>
+                <Label minWidth="120.0" text="Place disponible :">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Label>
+                <ComboBox fx:id="placesDisponiblesComboBox" prefHeight="30.0" prefWidth="250.0" promptText="select" />
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+        </HBox>
+
+        <HBox alignment="CENTER" prefHeight="40.0" spacing="10.0">
+            <children>
+                <Label text="Trajet Snuméro" />
+                <TextField fx:id="trajetNumero" editable="false" prefHeight="30.0" prefWidth="150.0" />
+            </children>
+        </HBox>
+
+        <HBox alignment="CENTER" prefHeight="60.0" spacing="30.0">
+            <children>
+                <Button fx:id="annulerButton" mnemonicParsing="false" onAction="#onAnnulerButtonClick" prefHeight="35.0" prefWidth="120.0" style="-fx-border-color: #6c757d; -fx-background-color: white; -fx-border-radius: 5;" text="Annuler" />
+                <Button fx:id="validerButton" mnemonicParsing="false" onAction="#onValiderButtonClick" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #7765c4; -fx-text-fill: white; -fx-background-radius: 5;" text="Valider" />
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

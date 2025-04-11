@@ -1,12 +1,10 @@
 package fr.esiee.easytrainfx;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
 import java.io.IOException;
 
 public class LoginController {
@@ -18,41 +16,45 @@ public class LoginController {
     private PasswordField passwordField;
 
     @FXML
-    private void onLoginButtonClick(ActionEvent event) {
-        String identifiant = identifiantField.getText();
+    private Button loginButton;
+
+    @FXML
+    private void onLoginButtonClick() {
+        String username = identifiantField.getText();
         String password = passwordField.getText();
 
-        if (identifiant.isEmpty() || password.isEmpty()) {
-            showAlert("Erreur", "Veuillez remplir tous les champs !");
+        if (username.isEmpty() || password.isEmpty()) {
+            showAlert("Erreur de connexion", "Veuillez remplir tous les champs.");
             return;
         }
 
-        if ("admin".equals(identifiant) && "1234".equals(password)) {
-            showAlert("Succès", "Connexion réussie !");
-
-            // Changer d'écran après connexion
+        // Ici, vous devriez vérifier les identifiants auprès de votre système d'authentification
+        // Pour l'exemple, nous utilisons une vérification simple
+        if (username.equals("admin") && password.equals("admin")) {
             try {
-                MainApplication.showPlanningScreen();
+                // Naviguer directement vers le dashboard
+                MainApplication.showDashboardScreen();
             } catch (IOException e) {
+                showAlert("Erreur", "Impossible de charger le dashboard: " + e.getMessage());
                 e.printStackTrace();
             }
         } else {
-            showAlert("Erreur", "Identifiant ou mot de passe incorrect !");
+            showAlert("Erreur de connexion", "Identifiant ou mot de passe incorrect.");
         }
     }
 
-
     @FXML
-    private void onSignupLinkClick(ActionEvent event) {
+    private void onSignupLinkClick() {
         try {
-            MainApplication.showSignupScreen(); // Redirection vers l'inscription
+            MainApplication.showSignupScreen();
         } catch (IOException e) {
+            showAlert("Erreur", "Impossible de charger la page d'inscription: " + e.getMessage());
             e.printStackTrace();
         }
     }
 
     private void showAlert(String title, String message) {
-        Alert alert = new Alert(AlertType.INFORMATION);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);
